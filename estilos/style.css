@@ -1,26 +1,123 @@
-@charset"UTF-8";
+@charset "UTF-8";
 
 *{
     margin: 0px;
     padding: 0px;
 }
-body{
+
+:root{
+    --cor1: #8da99b;
+    --cor2: #fab3ad;
+    --cor3: #2c2827;
+    --cor4: #610a10;
+    --cor5: #57675c;
+}
+html,body{
+    width: 100vw;
+    height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    
 }
 header{
-    background-color: gray;
+    background-image: url('../imagens/familia_forger.webp');
+    background-size: cover; 
+    background-position: center center;
+    height: 90vh;
     width: 100vw;
-    height: 30vh;
+    
+}
+div#head{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.688);
+    width: 100vw;
+    height: 90vh;
+    clear: both;
+    color: white;
+   
+
+}
+div#head>h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   font-size: 6vw;
+   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.482);
+   
+}
+ #head>nav{
+    padding: auto;-right: 20px;
+    padding: 20px;
 }
 
- a.forap{
+header a{
     float: right;
     font-size: 20px;
     text-decoration: none;
     color: white;
     padding: 10px;
+    margin: 5px;
+    border-radius: 30px;
+    border: 1px solid var(--cor5);
 }
-a:hover{
-    background-color: rgba(255, 17, 17, 0.477);
+header a:hover{
+    background-color: var(--cor5);
     transition-duration: 0.5s;
+    border-radius: 30px;
+}
+main{
+    background-color: white;
+    margin: auto;
+}
+main h1, h2{
+    margin: 5px;
+    padding: 5px;
+}
+main p{
+    font-size: 20px;
+    line-height: 28px;
+}
+article{
+    padding:  30px;
+    text-align: justify;
+}
+article>p{
+    text-indent: 30px;
+    margin-bottom:10px ;
+}
+article#autor{
+    color: white;
+    background-color: var(--cor3);
+     margin: 30px 0px;
+     height: 55vh;
+    padding: 30px;
+}
+img#endo{
+    float: right;
+    width: 25vw;
+    padding: 0px 10px;
+}
+aside{
+    clear: both;
+    text-align: center;   
+}
+table{
+    padding: 10px;
+    border-collapse: collapse;
+    width: 500px;
+}
+caption{
+    font-size: 20px;
+}
+td,th{
+    border: 1px solid black;
+    padding: 10px;
+}
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
 }
