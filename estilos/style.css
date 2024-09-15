@@ -90,7 +90,6 @@ article>p{
 article#autor{
     color: white;
     background-color: var(--cor3);
-     margin: 30px 0px;
      height: 55vh;
     padding: 30px;
 }
@@ -100,17 +99,36 @@ img#endo{
     padding: 0px 10px;
 }
 aside{
-    clear: both;
-    text-align: center;   
+    position: relative;
+    display: flex;
+    clear: right;
+    padding: 30px 10px;
+   
+}
+aside a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-left: 5px;
+    padding: 5px;
+
+}
+div a:hover{
+    text-decoration: underline;
 }
 table{
-    padding: 10px;
+    
+   width: 500px;
+   padding: 5px;
     margin: 10px 10px 0px 10px;
     border-collapse: collapse;
+    
    
 }
 caption{
     font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
 }
 thead th{
     background-color: black;
@@ -125,6 +143,27 @@ tr:nth-child(even){
 }
 tr:nth-child(odd){
     background-color: white;
+}
+img#anya{
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    width: 350px;
+    height: 330px;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+img#ashe{
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    width: 350px;
+    height: 330px;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+img#ashe:hover{
+    display: none;
 }
 footer{
     background-color: var(--cor5);
