@@ -100,20 +100,20 @@ img#endo{
 }
 
 section{
+    background-image:linear-gradient(to bottom, white, #57675c);
     text-align: center;
-    
-    
+    display: flex;
+    flex-direction: row;
 }
     
 div#esquerda{
-    float: left;
+    
     width: 15vw;
 }
 #esquerda>img{
     width: 15vw;
 }
 div#direita{
-    float: right;
     width: 15vw;
 }
 #direita>img{
@@ -121,7 +121,6 @@ div#direita{
 }
 div#tabela{
     position: relative;
-    float: left;
     width: 70vw;
     
    
@@ -162,19 +161,15 @@ tr:nth-child(even){
 tr:nth-child(odd){
     background-color: white;
 }
-aside{
-    background-image: linear-gradient(to bottom, white, #57675c);
+#especial{
     position: relative;
-    clear: both;
-    padding: 20px;
-    width: 100vw;
-    height: 50vh;
+    
 }
-aside>img{
+#especial>img{
     position: absolute;
-    top: 50%;
+    top: 100%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,200%);
     width: 350px;
     height: 330px;
     border-radius: 25px;
