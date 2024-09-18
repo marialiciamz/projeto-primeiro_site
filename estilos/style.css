@@ -5,13 +5,6 @@
     padding: 0px;
 }
 
-:root{
-    --cor1: #8da99b;
-    --cor2: #fab3ad;
-    --cor3: #2c2827;
-    --cor4: #610a10;
-    --cor5: #57675c;
-}
 html,body{
     width: 100vw;
     height: 100vh;
@@ -21,19 +14,19 @@ html,body{
     
 }
 header{
-    background-image: url('../imagens/familia_forger.webp');
-    background-size: cover; 
-    background-position: center center;
+    background-image: url('../imagens/familia_forger.webp'); /* adiciona uma imagem no fundo do elemento*/
+    background-size: cover; /*informa que a imagem de fundo deve ocupar 100% da tela independente se a imagem será exibida por completo*/
+    background-position: center center; /*escifica a posição da imagem de fundo*/ 
     height: 90vh;
     width: 100vw;
     
 }
 div#head{
-    position: relative;
+    position: relative;  /* o elemento é posicionado em relação ao elemento pai*/
     background-color: rgba(0, 0, 0, 0.688);
     width: 100vw;
     height: 90vh;
-    clear: both;
+    clear: both; /*informa que que o elemento não ficará ao redor do elemento flutuante*/
     color: white;
    
 
@@ -53,7 +46,7 @@ div#head>h1{
 }
 
 header a{
-    float: right;
+    float: right; /* define um elemento cmo flutuante e a direita*/
     font-size: 20px;
     text-decoration: none;
     color: white;
@@ -63,9 +56,14 @@ header a{
     border: 1px solid #57675c;
 }
 header a:hover{
-    background-color: #57675c;
+    background-color: #57675c; /*muda a cor de fundo do texto quando o cursor passar por cima do elemento em questão*/
+
     transition-duration: 0.5s;
     border-radius: 30px;
+}
+header a:active{
+    color: #fab3ad; /*muda a cor de fundo do texto quando o elemento for clicado*/
+    transition-duration: 0s;
 }
 main{
     background-color: white;
@@ -96,14 +94,15 @@ article#autor{
 img#endo{
     float: right;
     width: 25vw;
-    padding: 0px 10px;
+    min-width: 200px;
+    padding-left: 10px;
 }
 
 section{
-    background-image:linear-gradient(to bottom, white, #57675c);
-    text-align: center;
-    display: flex;
-    flex-direction: row;
+    background-image:linear-gradient(to bottom, white, #57675c); /*cria um degradê*/
+    text-align: center;/*alinha o texto no centro*/
+    display: flex; /*possibilita uma manipulação mais flexivel dos elementos dentro deste*/
+    flex-direction: row; /*define como os elementos irão se posicionar, nesse caso na horizontal já que row é igual a linha*/ 
 }
     
 div#esquerda{
@@ -135,6 +134,7 @@ div#tabela>table{
     width: 47vw;
      
 }
+
 caption{
     font-size: 20px;
     font-weight: bold;
@@ -155,27 +155,27 @@ td,th{
     border: 1px solid black;
     padding: 10px;
 }
-tr:nth-child(even){
-    background-color: #675c5a;
+tr:nth-child(even){ 
+    background-color: #675c5a; /*torna o fundo das linhas pares cinza*/
 }
 tr:nth-child(odd){
-    background-color: white;
+    background-color: white; /*torna o fundo das linhas impares cinza*/
 }
 #especial{
-    position: relative;
+    position: relative; /* permite alterar o posicionamento do elemento em relação a sua posição normal*/
     
 }
 #especial>img{
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translate(-50%,200%);
+    transform: translate(-50%,200%); /*move o elemento em relação ao seu proprio tamanho*/
     width: 350px;
     height: 330px;
-    border-radius: 25px;
+    border-radius: 25px; /*arredonda as bordas do elemento*/
     border: 1px solid black;
 }
 
 img#ashe:hover{
-    display: none;
+    display: none; /*quando passar o cursor por cima da imagem a que esta por cima sumirá e a que esta por baixo aparecerá*/
 }

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Sofadi+One&display=swap'); /*importa a fonte*/
+* {
+    margin: 0; /*remove a margem padrão de todos os elementos*/
+    padding: 0; /*remove o preenchimento de todos os elementos*/
+    box-sizing: border-box; /*tipo de borda*/
+    font-family: Sofadi One; /*fonte */
+}
+
+.h{
+    position: absolute; /*posição do paragrafo*/
+    top: 7px; /*distancia do h1 até o topo da página*/
+    left: 7px; /*disteancia do lado esquerdo da página*/
+    font-size: 25px; /*tamanho da fonte*/
+    color: #363636;/*cor do h1*/
+    
+
+}
+
+body {
+    display: flex; /*flebox pora layout*/
+    justify-content: center; /*centraliza horizontalamente*/
+    align-items: center; /*centralizar o conteúdo dentro do body(os cards)*/
+    min-height: 100vh; /*define a altura minima do body*/
+    background: linear-gradient(#fab3ad, #8da99b); /*cor de fundo com degrade*/
+    padding: 20px; /*adicinar um espaçamento interno de 20px */
+    flex-direction: column; /*alinha os cards na vertical*/
+}
+
+/* Estilos do container */
+.personagens {
+    display: flex; /*flex box para layout*/
+    justify-content: center; /*centraliza os cards*/
+    align-items: center; /*centralizar os cards verticalmente*/
+    flex-wrap: wrap; /*permite que o cards quebrem para proxima linha*/
+    gap: 50px; /*espaço de 5opx entre os cards*/
+    padding: 90px; /*distancia entre o a div e o top*/
+}
+
+/* Estilos dos cards */
+.card1 {
+    position: relative;
+    display: flex; /*usar felxbox para layout interno dentro do card*/
+    justify-content: center;/*centrlizar o contéudo dentro do card*/
+    align-items: flex-start;/*alinha o conteudo no topo do card*/
+    width: 360px; /*largura do card*/
+    height: 360px; /*altura do card*/
+    border-radius: 20px; /*arrendoda a imagem*/
+    box-shadow: 0 35px 80px rgb(0, 0, 0, 0.15);
+    background: #fff; /*cor do card*/
+    transition: 0.3s; /*transição quando passar o mouse por cima*/
+    
+    text-align: center; /*deixar o texto dentro do card centralizado*/
+}
+
+.card1:hover {
+    transform: translateY(-10px); /*move o card para cima */
+    height: 400px;/*aumenta a altura do card*/
+}
+
+/* Estilos da imagem */
+.card1 .img1 {
+    position: absolute; /*colocar a imagem de froma total no card*/
+    top: 20px; /*alinha a imagem ao top*/
+    width: 350px; /*largura da imagem*/
+    height: 220px;/*altura da imagem*/
+    border-radius: 12px; /*borda redonda*/
+    background: #57675c; /*cor de fundo da imagem*/
+    transition: 0.3s; /*transição da imagem*/
+}
+
+.card1 .img1 img {
+    width: 100%; /*faz imagem ocupar todo o espaço*/
+    height: 100%;/*faz a imagem ocupar toda aaltura*/
+    object-fit: cover; /*deixar a imagem proporcional ao tamanho do card*/
+    border-radius: 12px; /*borda redonda*/
+}
+
+/* Estilos do texto */
+.card1 .paragrafo {
+    position: absolute; /*permite o posicionamento absoluto no car*/
+    top: 250px; /*posição do card e relação ao top*/
+    width: 100%;/*largura do paragrafo*/
+    height: 35px;/*altura do pragrafo*/
+    padding: 0 30px;/*espaco lateral dos card*/
+    overflow: hidden;/*colocar o paragrafo dentro do card*/
+    text-align: center;/*texto centralizado no paragrafo*/
+    transition: 0.3s; /*transição*/
+    
+}
+
+.card1:hover .paragrafo {
+    top: 150px; /*distancia quando passa o mouse em cima do paragrafo*/
+    height: 250px;/*altura do paragrafo*/
+}
+
+.card1:hover .img1 {
+    top: -100px; /*move a imagem para cima ao passar p mouse*/
+    scale: 0.75;/*reduz o tamanho da imagem*/
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);/*colocar uma sombra */
+}
+
+.card1 .paragrafo h2 {
+    font-size: 1.5rem; /*tamamho da fonte*/
+    font-weight: 700;
+    line-height: 3rem;/*espaçamento entre linhas*/
+    color: var(--cor); /*trás a cor que tá no dic pro h2*/
+}
+
+.card1 .paragrafo p {
+    color: #555; /*cor do paragrafo*/
+}
+
+.card1:hover .paragrafo p {
+    color: #363636;/*mudar a cor do pragrafo ao passar o mouse em cima*/
+}
+
+.card1 .paragrafo a {
+    display: inline-block;/*permite que se comporte como um bloco*/ 
+    margin-top: 15px; /*espaçamento*/
+    padding: 10px 20px;/*espaçamento interno*/
+    text-decoration: none;/*remove o sublinahdo*/
+    font-weight: 500;
+    background: var(--cor); /*puxa a cor do div*/
+    color: #fff;/*cor do texto*/
+    border-radius: 8px;/*arrendonda os cantos*/
+    transition: 0.3s;/*transição ao passar o mouse*/
+}
+
+.card1 .paragrafo a:hover {
+    background: #040305;
+}
+h1{
+    text-align: center;/*centralizar*/
+   
+}
+h2{
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.611);
+}

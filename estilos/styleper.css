@@ -2,9 +2,9 @@
 
 body{
     position: relative;
-    background-color: #610a10;
-    width: 100vw;
-   height: 100vh;
+    background-color: #610a10; /*muda a cor de fundo de um elemento*/
+    width: 100vw; /*controla a largura do elemento*/
+   height: 100vh; /*controla a altura do elemento*/
 }
 main{
     position: absolute;
@@ -16,16 +16,16 @@ main{
     width: 100vw;
 }
 img{
-    width: 35vw;
+    width: 50vw;
+    min-width: 250px; /*especifica a largura minima que o elemento pode atingir*/
+    max-width: 550px; /*especifica a largura maxima que o elemento pode atingir*/
     padding: 20px;
-    border: 1px solid transparent;
-    border-radius: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box; /*inclui o preenchimento e a borda a largura e altura totais do elemento*/
 }
 img:hover{
     padding: 0px;
-    transition-duration: 0.4s;
+    transition-duration: 0.4s; /*especifica o tempo de transição do elemento*/
 }
 p{
-    color: white;
+    color: white; /*muda a cor dos elementos de texto*/
 }
