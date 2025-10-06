@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trailers de SPY x FAMILY | Arquivo de Mídia</title>
+    <!-- Fontes usadas: Cinzel Decorative (Títulos) e Sofadi One (Corpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Sofadi+One&display=swap" rel="stylesheet">
+    <!-- Carregando Tailwind para utilitários responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="estilos/styleAssitir.css">
+    
+   
+</head>
+<body>
+    
+
+  <div class="mission-banner">
+        <p>OPERAÇÃO STRIX | ARQUIVO DE MÍDIA CÓDIGO VERDE | ACESSO DE VÍDEO</p>
+    </div>
+
+    <!-- O CONTEÚDO PRINCIPAL (MAIN) ESTÁ CENTRALIZADO GRAÇAS ao CSS do BODY (align-items: center) -->
+    <main id="trailer-app" class="flex flex-col items-center w-full max-w-7xl px-4">
+        
+        <!-- Conteúdo dinâmico será injetado aqui pelo JavaScript -->
+
+    </main>
+
+    <footer class="confidential-footer">
+        <p>ESTE ARQUIVO É CONFIDENCIAL. ACESSO RESTRITO À AGENTES DA WISE. | CÓDIGO: TWILIGHT</p>
+    </footer>
+
+    <script>
+        const app = document.getElementById('trailer-app');
+
+        // Dados dos trailers com URLs corrigidas e funcionais
+        const trailers = [
+            {
+                title: "Trailer Oficial da 1ª Temporada",
+                image: "https://placehold.co/400x225/C0392B/F7DC6F?text=T1+OFICIAL", // Placeholder
+                // URL simplificada para melhorar a compatibilidade de incorporação.
+                embedUrl: "https://www.youtube.com/embed/b8Cb_hRmnTM?autoplay=1" 
+            },
+            {
+                title: "Trailer Oficial da 2ª Temporada",
+                image: "https://placehold.co/400x225/1F2937/C0392B?text=T2+OFICIAL", // Placeholder
+                // URL simplificada para melhorar a compatibilidade de incorporação.
+                embedUrl: "https://www.youtube.com/embed/kCd4iY7hkHc?autoplay=1" 
+            },
+            {
+                title: "Trailer do Filme: CODE WHITE",
+                image: "https://placehold.co/400x225/34495E/F7DC6F?text=CODE+WHITE", // Placeholder
+                // URL simplificada para melhorar a compatibilidade de incorporação.
+                embedUrl: "https://www.youtube.com/embed/m5TxWbtQ7qU?autoplay=1" 
+            }
+        ];
+
+        /**
+         * Gera a visualização da lista de trailers.
+         */
+        function showList() {
+            // A classe 'justify-items-center' centraliza CADA CARD dentro de sua coluna no Grid,
+            // garantindo que fiquem alinhados ao centro, especialmente em layouts de 1 ou 2 colunas.
+            app.innerHTML = `
+                <h1 class="h1-title">Arquivos de Mídia</h1>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto justify-items-center">
+                    ${trailers.map((trailer) => `
+                        <div class="trailer-card" onclick="showTrailer('${trailer.title.replace(/'/g, "\\'")}', '${trailer.embedUrl}')">
+                            <img src="${trailer.image}" alt="${trailer.title}" 
+                                 onerror="this.onerror=null;this.src='https://placehold.co/400x225/111827/C0392B?text=IMAGEM+SECRETA'">
+                            <p>${trailer.title}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        /**
+         * Exibe o player de vídeo para o trailer selecionado.
+         * @param {string} title - Título do trailer.
+         * @param {string} embedUrl - URL de incorporação do YouTube.
+         */
+        function showTrailer(title, embedUrl) {
+            app.innerHTML = `
+                <h1 class="h1-title mb-4">Visualizando: ${title}</h1>
+                <div id="video-viewer">
+                    <div class="video-responsive">
+                        <!-- O iframe é dimensionado pelo CSS para ser responsivo -->
+                        <iframe 
+                            src="${embedUrl}" 
+                            title="${title}" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <button class="back-button" onclick="showList()">
+                    <span style="font-family: 'Sofadi One', cursive;">Voltar aos Arquivos</span>
+                </button>
+            `;
+        }
+
+        // Inicializa a página mostrando a lista de trailers
+        window.onload = showList;
+
+    </script>
+
+</body>
+</html>

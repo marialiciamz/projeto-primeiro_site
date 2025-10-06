@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPY x FAMILY | Operação Strix</title>
+    <!-- Adicionei o ícone de atalho que estava no seu código original -->
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <!-- Inclui o Tailwind CSS e fontes personalizadas para o tema "Agente Secreto" -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Sofadi+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/style.css"> <!--CSS externo-->
+
+</head>
+
+<body class="antialiased">
+
+    <!-- NAVEGAÇÃO FIXA NO TOPO: Layout limpo e presente em todas as páginas -->
+    <header class="sticky top-0 z-50 w-full bg-[#10172A] border-b border-[#C0392B]/50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            
+            <!-- Título do Site / Marca -->
+            <h1 class="text-3xl font-bold tracking-wider" 
+                style="font-family: 'Cinzel Decorative', serif; color: #F7DC6F; animation: glitch 2s infinite alternate;">
+                SPY x FAMILY
+            </h1>
+
+            <!-- Botões de Navegação -->
+            <nav class="flex space-x-4">
+                <a href="assistir.html" 
+                   class="text-lg text-white no-underline px-4 py-2 rounded-lg hover:bg-[#C0392B] transition-colors duration-300 border border-transparent hover:border-[#F7DC6F]">Assistir</a>
+                <a href="Personagens.html" 
+                   class="text-lg text-white no-underline px-4 py-2 rounded-lg hover:bg-[#C0392B] transition-colors duration-300 border border-transparent hover:border-[#F7DC6F]">Personagens</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION: Uma introdução visual marcante e responsiva (Não mais full-screen) -->
+    <section class="relative h-96 w-full flex items-center justify-center mb-12 overflow-hidden">
+        <!-- Imagem de Fundo (Usando o caminho original: imagens/familia_forger.webp) -->
+        <div class="absolute inset-0 bg-cover bg-center bg-fixed" 
+             style="background-image: url('imagens/familia_forger.webp'); background-position: top;">
+            <!-- Overlay Escuro/Gradiente para o Título (Reduzido para 30% de opacidade) -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#10172A] to-black/30"></div>
+        </div>
+
+        <div class="relative z-10 p-6 text-center">
+            <p class="text-2xl sm:text-3xl text-white tracking-widest font-thin uppercase">
+                Bem-vindo à
+            </p>
+            <h2 class="text-5xl sm:text-6xl text-[#F7DC6F] font-black uppercase mt-2"
+                style="font-family: 'Cinzel Decorative', serif;">
+                Operação Strix
+            </h2>
+        </div>
+    </section>
+
+    <!-- MAIN - CONTEÚDO PRINCIPAL (Sinopse e Autor) -->
+    <main class="max-w-7xl mx-auto p-4 sm:p-8">
+        
+        <!-- Sinopse como um "Relatório de Missão" -->
+        <article class="bg-gray-800 p-6 md:p-10 rounded-xl shadow-2xl border-l-4 border-[#C0392B] mb-16">
+            <h2 class="text-3xl sm:text-4xl text-[#C0392B] mb-6 font-bold text-center" style="font-family: 'Cinzel Decorative', serif;">
+                Relatório de Missão | Sinopse
+            </h2>
+            <div class="space-y-4 text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
+                <p class="indent-6">O anime se passa em um mundo alternativo no qual dois países estão em constantes conflitos. Em meio a esse barril de pólvora prestes a explodir, o espião **Twilight** é convocado para a **Operação Strix**, fundamental para manter a paz no mundo. Seu objetivo é se aproximar de um figurão político, portanto o serviço de inteligência descobriu que ele frequenta reuniões escolares de seus filhos. Agora Twilight precisa formar uma família falsa para se aproximar do alvo.</p> 
+
+                <p class="indent-6">Assumindo a identidade de **Loid Forger**, Twilight adota a garota **Anya** e se casa no civil com a funcionária pública **Yor Briar**, e agora eles precisam fingir ser uma família perfeita. O que Loid não faz ideia é que cada uma delas também esconde um segredo, pois Anya é uma telepata capaz de ler mentes e Yor é uma assassina de aluguel que atende pela alcunha de **Rosa Selvagem**.</p>
+            </div>
+        </article>
+
+        <!-- Seção do Autor e Obras (Usando GRID para melhor layout) -->
+        <section class="bg-gray-900 rounded-xl p-6 md:p-10 shadow-2xl border-4 border-double border-[#F7DC6F]">
+            <h2 class="text-3xl sm:text-4xl text-[#F7DC6F] mb-10 text-center font-bold" style="font-family: 'Cinzel Decorative', serif;">
+                Tatsuya Endo | Arquiteto da Missão
+            </h2>
+            
+            <!-- Bio do Autor e Arquivo de Imagens (Grid de duas colunas) -->
+            <!-- MUDANÇA AQUI: grid-cols-3 -> grid-cols-4 para dar mais espaço à biografia -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 items-start">
+                
+                <!-- Imagem e Arquivo de Imagens (Coluna 1) -->
+                <aside class="md:col-span-1 flex flex-col items-center space-y-6">
+                    <!-- Imagem do Autor - USANDO CAMINHO ORIGINAL -->
+                    <img id="endo" src="imagens/image-350.png" 
+                         alt="Tatsuya Endo" title="Tatsuya Endo" 
+                         class="w-full max-w-xs rounded-xl shadow-xl border-4 border-[#C0392B] object-cover">
+                    
+                    <!-- Arquivo de Imagens - Interativo -->
+                    <div class="bg-gray-800 p-4 rounded-lg shadow-inner border-t-2 border-[#F7DC6F]">
+                        <h3 class="text-lg font-bold text-[#F7DC6F] uppercase mb-3 text-center">Arquivo de Imagens</h3>
+                        <div class="relative w-40 h-40 overflow-hidden rounded-full shadow-lg border-4 border-gray-700 group cursor-pointer mx-auto">
+                            <!-- Imagem Anya (Fica por cima) - USANDO CAMINHO ORIGINAL -->
+                            <img id="anya" src="imagens/anya.jpg" alt="Anya" class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0 absolute inset-0">
+                            <!-- Imagem Ashe (Aparece no hover) - USANDO CAMINHO ORIGINAL -->
+                            <img id="ashe" src="imagens/ashe.jpg" alt="Rengoku no Ashe" class="w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        </div>
+                        <p class="text-sm text-gray-500 pt-2 text-center">Passe o mouse para ver a inspiração.</p>
+                    </div>
+                </aside>
+
+                <!-- Biografia (Coluna 2) -->
+                <!-- MUDANÇA AQUI: col-span-2 -> col-span-3 para ocupar 75% do espaço -->
+                <article id="autor-bio" class="md:col-span-3 bg-gray-800 p-6 rounded-lg shadow-inner border-r-4 border-[#C0392B] text-gray-300 space-y-4 text-lg">
+                    <p class="indent-6">Desde a infância, **Endō Tatsuya (遠藤達哉)** sonhava ser um artista de mangá. Nasceu em 23 de julho de 1980 na Prefeitura de Ibaraki, Japão, e estudou na Ibaraki Kenritsu Koga Daisan High School.</p>
+
+                    <p class="indent-6">Desde muito jovem, Endo começa a criar histórias com o seu irmão, no entanto, apenas ele decide seguir o sonho de infância. Começa a sua carreira a criar **one-shots**. Algumas dessas histórias únicas teriam influências nos seus mangás posteriores, como foi o caso de SPY x FAMILY.</p>
+                    
+                    <p class="indent-6">Enquanto Endo desenhava estas histórias de volume único chegou a trabalhar como assistente para a série de mangá *Blue Exorcist* e *Fire Punch*. Ele foi orientado e ensinado pelos artistas de mangá Yasuhiro Kanō e Yoshiyuki Nishi.</p>
+                </article>
+            </div>
+            
+            
+            <!-- Tabela de Obras -->
+            <div class="data-table-container mt-12">
+                <table class="data-table mx-auto">
+                    <caption>Obras que inspiraram SPY x FAMILY</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="w-2/3">Nome</th> 
+                            <th scope="col" class="w-1/3">Ano de Lançamento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>SEIBU YUUGI</td><td>2000</td></tr> 
+                        <tr><td>GEKKA BIJIN</td><td>2000</td></tr>
+                        <tr><td>WITCH CRAZE</td><td>2001</td></tr>
+                        <tr><td>PMG-0</td><td>2004</td></tr>
+                        <tr><td>TISTA</td><td>2007</td></tr>
+                        <tr><td>RENGOKU NO ASHE</td><td>2014</td></tr>
+                        <tr><td>ISHI NI USUBENI, TETSU NI HOSHI</td><td>2017</td></tr>
+                        <tr><td>ISPY</td><td>2018</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="2">
+                                <a href="https://skdesu.com/tatsuya-endo-one-shot-spy-family/" target="_blank">Mais sobre as obras (Link Externo)</a>
+                            </th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Galeria de Obras -->
+            <div class="mt-12">
+                <h3 class="text-2xl text-[#C0392B] text-center mb-6 font-bold uppercase">Galeria de Arquivos Antigos</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4 justify-items-center">
+                    <img src="imagens/shihou_yuugi-150.jpg" alt="Shihou Yuugi" title="Shihou Yuugi" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform border border-gray-700">
+                    <img src="imagens/gekka_bijin-150.jpg" alt="Gekka Bijin" title="Gekka Bijin" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform border border-gray-700">
+                    <img src="imagens/witch_craze-150.jpg" alt="Witch craze" title="Witch craze" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform border border-gray-700">
+                    <img src="imagens/Rengoku_no_Ashe-150.webp" alt="Rengoku no Ashe" title="Rengoku no Ashe" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform border border-gray-700">
+                    <img src="imagens/Tista-150.jpg" alt="Trista" title="Trista" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform border border-gray-700">
+                    <img src="imagens/Ishi_ni_Usubeni_Tetsu_ni_Hoshi-150.webp" alt="Ishi ni Usubeni, Tetsu ni Hoshi" title="Ishi ni Usubeni, Tetsu ni Hoshi" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform border border-gray-700">
+                    <img src="imagens/pmg-0-150.jpg" alt="PMG-0" title="PMG-0" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform border border-gray-700">
+                    <img src="imagens/ispy150.jpg" alt="ISPY" title="ISPY" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform border border-gray-700">
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="w-full py-4 text-center bg-gray-900 border-t-2 border-[#C0392B] text-sm text-gray-500 mt-12"> 
+        <p class="p-0">Criado por <span class="text-[#F7DC6F] font-bold">Luís Antônio</span> e <span class="text-[#F7DC6F] font-bold">Maria Alícia</span></p>
+    </footer>
+
+</body>
+
+</html>

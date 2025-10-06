@@ -1,0 +1,74 @@
+ /* Cores Base: Escuro/Marinho (#10172A), Dourado/Alerta (#F7DC6F), Vinho/WISE (#C0392B) */
+        
+        /* Estilo customizado do corpo para a estética de Arquivo Confidencial */
+        body {
+            font-family: 'Sofadi One', cursive, sans-serif;
+            background-color: #10172A; 
+            color: #CBD5E1; 
+            min-height: 100vh;
+        }
+
+        /* Animação para o efeito de "falha no sistema" nos títulos */
+        @keyframes glitch {
+            0% { text-shadow: 1px 1px #C0392B; transform: translate(0); }
+            50% { text-shadow: -1px -1px #F7DC6F; transform: translate(1px); }
+            100% { text-shadow: 1px 1px #C0392B; transform: translate(0); }
+        }
+
+        /* Estilo da Tabela para o tema escuro e responsivo */
+        .data-table-container {
+            overflow-x: auto; /* Permite scroll horizontal em telas pequenas */
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .data-table caption {
+            font-family: 'Cinzel Decorative', serif;
+            color: #F7DC6F;
+            padding: 15px;
+            font-size: 1.25rem;
+            background-color: #1F2937;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-bottom: 2px solid #C0392B;
+        }
+
+        .data-table th, .data-table td {
+            padding: 12px 15px;
+            border: 1px solid rgba(192, 57, 43, 0.4); /* Borda discreta */
+        }
+
+        .data-table thead th {
+            background-color: #C0392B; /* Cabeçalho Vermelho/Vinho */
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .data-table tbody tr:nth-child(odd) {
+            background-color: #1F2937; /* Linhas ímpares escuras */
+        }
+
+        .data-table tbody tr:nth-child(even) {
+            background-color: #27374D; /* Linhas pares um pouco mais claras */
+        }
+
+        .data-table tfoot th {
+            background-color: #10172A;
+        }
+
+        .data-table a {
+            color: #F7DC6F; /* Link dourado */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .data-table a:hover {
+            color: white;
+            text-decoration: underline;
+        }
